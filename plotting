@@ -1,0 +1,34 @@
+import matplotlib.pyplot as py;
+arr1 = list()
+arr2 = list()
+x = input("Enter the number of elements for the X-Axis\n")
+print("Enter the elements for X-Axis")
+for i in range(int(x)):
+	n = input("X-Number: ")
+	arr1.append(int(n))
+print("Enter the elements for Y-Axis")
+for i in range(int(x)):
+	n = input("Y-Number: ")
+	arr2.append(int(n))
+xlab = input("Enter the lable for X-Axis\n")
+ylab = input("Enter the lable for Y-Axis\n")
+tit = input("Enter the title of the plot\n")
+py.xlabel(xlab)
+py.ylabel(ylab)
+py.title(tit)
+print("Press 1 for plot graph\nPress 2 for Scatter Graph")
+a = input()
+x = 1
+while int(x)==1:
+	if int(a)==1:
+		py.plot(arr1,arr2)
+		py.show()
+		break;
+	elif int(a)==2:
+		py.scatter(arr1,arr2)
+		py.show();
+		break
+	else: 
+		print("Wrong input. Wanna try again? press 1 for yes")
+		x = input()
+print("Thanku You.")
